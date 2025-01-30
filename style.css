@@ -42,6 +42,109 @@ header {
   position: relative;
 }
 
+.logo .logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.cyber-logo {
+    position: relative;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
+
+.cyber-logo span {
+    position: absolute;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cyber-logo .front {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    animation: frontAnim 3s ease-in-out infinite;
+    background: linear-gradient(45deg, #00ffff 0%, #ffffff 50%, #00ffff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cyber-logo .back {
+    color: rgba(0, 255, 255, 0.2);
+    transform: rotateX(180deg) translateZ(-10px);
+    animation: backAnim 3s ease-in-out infinite;
+}
+
+.cyber-logo .glow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: glowAnim 3s ease-in-out infinite;
+    filter: blur(20px);
+    background: radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.5), transparent 50%);
+}
+
+@keyframes frontAnim {
+    0%, 100% {
+        transform: rotateX(0deg) translateZ(10px);
+    }
+    50% {
+        transform: rotateX(30deg) translateZ(20px);
+    }
+}
+
+@keyframes backAnim {
+    0%, 100% {
+        transform: rotateX(180deg) translateZ(-10px);
+    }
+    50% {
+        transform: rotateX(210deg) translateZ(-20px);
+    }
+}
+
+@keyframes glowAnim {
+    0%, 100% {
+        opacity: 0.5;
+        transform: translateZ(0px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateZ(10px);
+    }
+}
+
+.tech-logo {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
+               0 0 20px rgba(0, 255, 255, 0.3);
+  background: linear-gradient(120deg, #00ffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.tech-logo::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  width: calc(100% + 4px);
+  background: linear-gradient(120deg, #00ffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.3;
+}
+
 .logo-text {
   font-family: 'Source Code Pro', monospace;
   font-size: 28px;

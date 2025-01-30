@@ -1206,15 +1206,11 @@ footer .social-links a {
   font-size: 24px;
   transition: all 0.3s ease;
   padding: 10px;
-  border-radius: 50%;
-  background: rgba(22, 27, 34, 0.8);
-  border: 1px solid #30363d;
 }
 
 footer .social-links a:hover {
   color: #58a6ff;
   transform: translateY(-3px);
-  border-color: #58a6ff;
   box-shadow: 0 4px 12px rgba(88, 166, 255, 0.2);
 }
 

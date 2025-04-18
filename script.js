@@ -173,17 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     retina_detect: true
   });
-
-  // Disable resume download
-  const resumeBtn = document.querySelector('a[href="assets/resume.pdf"]');
-  if (resumeBtn) {
-    resumeBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert('Resume not available currently.');
-    });
-    resumeBtn.removeAttribute('download');
-    resumeBtn.removeAttribute('href');
-  }
 })
 
 function smoothScroll(e) {
